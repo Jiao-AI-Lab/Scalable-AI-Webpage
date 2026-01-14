@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELENG 290/194-16: Scalable AI - Spring 2026 | UC Berkeley</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.5;
+            color: #374151;
+            background: linear-gradient(to bottom, #f0fdf4 0%, #dbeafe 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .semester {
+            font-size: 1.2em;
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #111827;
+            margin: 30px 0 15px;
+        }
+
+        h4 {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .announcement {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .announcement strong {
+            color: #92400e;
+        }
+
+        .info-section {
+            background-color: #f9fafb;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .staff-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+
+        .staff-member {
+            text-align: center;
+            flex: 0 0 200px;
+        }
+
+        .staff-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid #e5e7eb;
+        }
+
+        .staff-name {
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 5px;
+        }
+
+        .staff-role {
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background-color: #f9fafb;
+            color: #111827;
+            font-weight: 700;
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+
+        tr:hover {
+            background-color: #f9fafb;
+        }
+
+        .section-header td {
+            background: linear-gradient(135deg, #d1fae5 0%, #dbeafe 100%);
+            color: #1e40af;
+            font-size: 1.1em;
+            padding: 18px 15px;
+            font-weight: 600;
+            border-left: 4px solid #10b981;
+            transition: all 0.3s ease;
+        }
+
+        .section-header:hover td {
+            background: linear-gradient(135deg, #a7f3d0 0%, #93c5fd 100%);
+            border-left-color: #3b82f6;
+        }
+
+        .lecture-title {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .guest-lecture {
+            color: #7c3aed;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .tools-list {
+            background-color: #eff6ff;
+            padding: 20px 25px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin: 20px 0;
+        }
+
+        .tools-list ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        .tools-list li {
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .tools-list li::before {
+            content: "🔧";
+            position: absolute;
+            left: 0;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .part-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 40px 0 20px;
+        }
+
+        .part-header h2 {
+            color: white;
+            border: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        .part-subtitle {
+            font-size: 1.1em;
+            font-style: italic;
+            opacity: 0.95;
+            margin-top: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+            border-top: 2px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        .lecture-topics {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #4b5563;
+        }
+
+        .lecture-topics ul {
+            margin-top: 5px;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .staff-member {
+                flex: 0 0 150px;
+            }
+
+            .staff-member img {
+                width: 120px;
+                height: 120px;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ELENG 290/194-16: Scalable AI</h1>
+            <p class="semester">Bridging Theory, Understanding, and Practice</p>
+            <p class="semester">Spring 2026 | UC Berkeley</p>
+        </header>
+
+        <div class="announcement">
+            <strong>Announcements:</strong> Course information will be updated regularly. Check back for enrollment details, assignment deadlines, and lecture materials.
+        </div>
+
+        <section id="overview">
+            <h2>Course Overview</h2>
+            <p>This course examines the principles required to build, train, and deploy large-scale AI models. We move through the lifecycle: defining the architecture, scaling the pre-training, specializing via post-training, compressing for efficiency, as well as safe and efficient deployment.</p>
+        </section>
+
+        <section id="logistics">
+            <div class="info-section">
+                <h3>Class Logistics</h3>
+                <p><strong>Course Number:</strong> ELENG 290 / ELENG 194-16 (Class #34123)</p>
+                <p><strong>Instructors:</strong> Anant Sahai and Jiantao Jiao</p>
+                <p><strong>Time:</strong> Tuesdays and Thursdays, 9:30 AM - 10:59 AM</p>
+                <p><strong>Location:</strong> Cory Hall, Room 521</p>
+                <p><strong>Units:</strong> 1-3 (variable)</p>
+                <p><strong>Instruction Mode:</strong> In-Person</p>
+            </div>
+        </section>
+
+        <section id="tools">
+            <h2>Practical Tools</h2>
+            <div class="tools-list">
+                <p>Students will gain hands-on experience with industry-standard tools after each module:</p>
+                <ul>
+                    <li><strong><a href="https://github.com/NVIDIA-NeMo/Automodel" target="_blank">NeMo AutoModel</a>:</strong> Profiling, Optimizing and Training LLMs</li>
+                    <li><strong><a href="https://github.com/NVIDIA-NeMo/Curator" target="_blank">NeMo Curator</a>:</strong> Scraping, Cleaning, and Curating Large Scale Pre-Training Corpuses</li>
+                    <li><strong><a href="https://github.com/NVIDIA-NeMo/DataDesigner" target="_blank">NeMo Data Designer</a>:</strong> Building High Quality Post-Training Datasets</li>
+                    <li><strong><a href="https://github.com/NVIDIA-NeMo/RL" target="_blank">NeMo RL</a> / <a href="https://github.com/NVIDIA-NeMo/Gym" target="_blank">NeMo Gym</a>:</strong> Post-Training infrastructure that powers Nemotron</li>
+                    <li><strong><a href="https://github.com/NVlabs/Minitron" target="_blank">Minitron</a>:</strong> Powering deployment efficiency preparation</li>
+                    <li><strong><a href="https://pytorch.org/docs/stable/torch.compiler.html" target="_blank">Dynamo</a>, <a href="https://github.com/NVIDIA/TensorRT-LLM" target="_blank">TensorRT-LLM</a>, <a href="https://github.com/sgl-project/sglang" target="_blank">SGLang</a>, and <a href="https://github.com/vllm-project/vllm" target="_blank">vLLM</a>:</strong> Efficient Deployment</li>
+                    <li><strong><a href="https://github.com/NVIDIA-NeMo/Guardrails" target="_blank">NeMo Guardrails</a> / <a href="https://github.com/NVIDIA/garak" target="_blank">Garak</a>:</strong> Safety during deployment</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="syllabus">
+            <h2>Course Syllabus</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Lecture</th>
+                        <th style="width: 70%;">Topic</th>
+                        <th style="width: 20%;">Materials</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Part 1: Architecture -->
+                    <tr class="section-header">
+                        <td colspan="3">
+                            <strong>Part 1: Architecture</strong> — Defining the Computational Graph and Scaling Strategies
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="lecture-title">Motivating Transformer Architectures Using Inference Bottlenecks</div>
+                            <div class="lecture-topics">
+                                Why hardware constraints dictate model design. Topics include:
+                                <ul>
+                                    <li>Introduction to the Matmul – The basis of deep learning</li>
+                                    <li>The Roofline Model and HBM Bottlenecks</li>
+                                    <li>Introduction of The Dense Transformer Architecture</li>
+                                    <li>Component-Level Cost Analysis</li>
+                                    <li>The Economics of Tokens</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <div class="lecture-title">MoE, Sparse & Long-Context Architectures</div>
+                            <div class="lecture-topics">
+                                Breaking hardware bottlenecks through architecture changes:
+                                <ul>
+                                    <li>Mixture of Experts (Breaking FFN bottlenecks)</li>
+                                    <li>Latent Attention Mechanics (Breaking KV bottlenecks)</li>
+                                    <li>Sequence Sharding and Sparse Attention</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <div class="lecture-title">Parallelism Strategies</div>
+                            <div class="lecture-topics">
+                                Hardware parallelism strategies:
+                                <ul>
+                                    <li>Parallelism Mechanics (6D parallelism)</li>
+                                    <li>Interconnect Topology</li>
+                                    <li>Automated Orchestration</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">NeMo AutoModel</div>
+                            <div class="lecture-topics">
+                                Guest lecture from the AutoModel team covering practical instruction for performance profiling, understanding arithmetic intensity, and optimization.
+                            </div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture] [Tentative]</div>
+                            <div class="lecture-title">Looking To The Future: Emerging Architectures</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+
+                    <!-- Part 2: Pre-Training -->
+                    <tr class="section-header">
+                        <td colspan="3">
+                            <strong>Part 2: Pre-Training of Language Models</strong> — The Engineering of "Base Models"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>
+                            <div class="lecture-title">Introduction to Pre-Training</div>
+                            <div class="lecture-topics">
+                                What is pre-training and large-scale data curation:
+                                <ul>
+                                    <li>Tokenization Fundamentals</li>
+                                    <li>The CLM Task</li>
+                                    <li>The Fundamentals of Pre-Training</li>
+                                    <li>How To Evaluate Pre-Trained Models</li>
+                                    <li>Data Curation, Deduplication, Quality Filtering</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">Powering Pre-Training: NeMo Curator</div>
+                            <div class="lecture-topics">
+                                Practical, hands-on curating work with NeMo Curator. Building usable pre-training datasets.
+                            </div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">Case Study: The Pre-Training of Nano-V3</div>
+                            <div class="lecture-topics">
+                                Deep dive into Nemotron's pre-training data, evaluation, training ablations, and hero run.
+                            </div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">Looking To The Future: Emerging Optimizers</div>
+                            <div class="lecture-topics">
+                                Moving beyond AdamW to emerging second-order methods (Muon, SOAP). Case study: Kimi-k2.
+                            </div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+
+                    <!-- Part 3: Post-Training -->
+                    <tr class="section-header">
+                        <td colspan="3">
+                            <strong>Part 3: Post-Training of Language Models</strong> — Specializing Models Through SFT and RL
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>
+                            <div class="lecture-title">Introduction To The LLM Post-Training LifeCycle</div>
+                            <div class="lecture-topics">
+                                The Pre-Training→SFT→RL paradigm:
+                                <ul>
+                                    <li>Difference between pre-training and post-training data</li>
+                                    <li>Chat Templating and Training Fundamentals</li>
+                                    <li>Introduction to Post-Training Benchmarks</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>
+                            <div class="lecture-title">SFT Data Engineering and RL Environments</div>
+                            <div class="lecture-topics">
+                                Constructing datasets that drive post-training:
+                                <ul>
+                                    <li>Synthetic Data Generation Pipelines</li>
+                                    <li>Rejection Sampling and Quality Scoring</li>
+                                    <li>The "Skills" Mixture and Data Balancing</li>
+                                    <li>RL Environment Construction</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">Building SFT Datasets: Foundations and Tooling</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">NeMo Data Designer Deep Dive</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">Using The NeMoRL Stack For RL Post-Training</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">Case Study: Post-Training of Nemotron-NanoV3</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+
+                    <!-- Part 4: Efficient Inference -->
+                    <tr class="section-header">
+                        <td colspan="3">
+                            <strong>Part 4: Efficient Inference</strong> — Deployment Preparation and High-Performance Frameworks
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">Deployment Preparation – Speculative Decoding, Quantization, Pruning, and NAS</div>
+                            <div class="lecture-topics">
+                                <ul>
+                                    <li>Advanced Data Types and Quantization Paradigms</li>
+                                    <li>Calibration Strategies</li>
+                                    <li>Architecture Search (Puzzletron/Minitron/Flextron)</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>
+                            <div class="lecture-title">Fundamentals and Overview of High Performance Inference Frameworks</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">High-Performance Inference using Dynamo and TRT-LLM</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">High-Performance Inference using vLLM and SGLang</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+
+                    <!-- Part 5: LLM Applications -->
+                    <tr class="section-header">
+                        <td colspan="3">
+                            <strong>Part 5: LLM Applications and Use Cases</strong> — Building Real-World AI Systems
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>
+                            <div class="lecture-title">Fundamentals of Context Engineering</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">Agentic Applications</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>
+                            <div class="guest-lecture">[Guest Lecture]</div>
+                            <div class="lecture-title">Safety Guardrails</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+
+                    <!-- Part 6: Research Greenfields -->
+                    <tr class="section-header">
+                        <td colspan="3">
+                            <strong>Part 6: Research Greenfields</strong> — Emerging Research Directions
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>
+                            <div class="lecture-title">Diffusion Language Models</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>
+                            <div class="lecture-title">Advanced RL Algorithms</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>
+                            <div class="lecture-title">Multi-Agent Systems and Architecture</div>
+                        </td>
+                        <td>TBD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="grading">
+            <h2>Grading & Enrollment</h2>
+            <div class="info-section">
+                <h3>Prerequisites</h3>
+                <p>CS 182/282A or equivalent background in deep learning</p>
+
+                <h3>Workload</h3>
+                <p>1-3 hours weekly instructor presentation plus 2-9 hours outside coursework (varies by unit enrollment)</p>
+
+                <h3>Enrollment</h3>
+                <p><strong>Capacity:</strong> 16 students</p>
+                <p><strong>Status:</strong> Class is currently full with a waitlist. Please check CalCentral for current enrollment status.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>This page was generated for GitHub Pages.</p>
+        </footer>
+    </div>
+</body>
+</html>
