@@ -12,1417 +12,1185 @@
             box-sizing: border-box;
         }
 
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        line-height: 1.5;
-        color: #374151;
-        background: linear-gradient(to bottom, #f0fdf4 0%, #dbeafe 100%);
-        min-height: 100vh;
-    }
-
-    .container {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    header {
-        text-align: center;
-        padding: 40px 0 20px;
-        border-bottom: 2px solid #e5e7eb;
-        margin-bottom: 40px;
-    }
-
-    h1 {
-        font-size: 2.5em;
-        font-weight: 700;
-        color: #111827;
-        margin-bottom: 10px;
-    }
-
-    .semester {
-        font-size: 1.2em;
-        color: #6b7280;
-        font-weight: 600;
-    }
-
-    .subtle {
-        font-size: 1em;
-        color: #6b7280;
-        margin-top: 10px;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        margin: 20px 0 0;
-    }
-
-    nav a {
-        display: inline-block;
-        padding: 8px 12px;
-        border-radius: 999px;
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        color: #2563eb;
-        font-weight: 600;
-        font-size: 0.95em;
-    }
-
-    nav a:hover {
-        text-decoration: none;
-        border-color: #bfdbfe;
-        background: #eff6ff;
-    }
-
-    h2 {
-        font-size: 1.8em;
-        font-weight: 700;
-        color: #1f2937;
-        margin: 40px 0 20px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #e5e7eb;
-        text-align: center;
-    }
-
-    h3 {
-        font-size: 1.3em;
-        font-weight: 600;
-        color: #111827;
-        margin: 30px 0 15px;
-    }
-
-    h4 {
-        font-size: 1.1em;
-        font-weight: 600;
-        color: #1f2937;
-        margin: 20px 0 10px;
-    }
-
-    p {
-        margin-bottom: 15px;
-        line-height: 1.6;
-    }
-
-    .announcement {
-        background-color: #fef3c7;
-        border-left: 4px solid #f59e0b;
-        padding: 15px 20px;
-        margin: 30px 0;
-        border-radius: 4px;
-    }
-
-    .announcement strong {
-        color: #92400e;
-    }
-
-    .info-section {
-        background-color: #f9fafb;
-        padding: 25px;
-        margin: 30px 0;
-        border-radius: 8px;
-        border: 1px solid #e5e7eb;
-    }
-
-    .two-col {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px 24px;
-        margin-top: 10px;
-    }
-
-    .two-col .item {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 8px;
-        padding: 14px 16px;
-    }
-
-    .two-col .label {
-        font-weight: 700;
-        color: #111827;
-        margin-bottom: 6px;
-    }
-
-    .two-col .value {
-        color: #374151;
-    }
-
-    .callout {
-        background-color: #ecfeff;
-        border-left: 4px solid #06b6d4;
-        padding: 16px 20px;
-        margin: 18px 0;
-        border-radius: 6px;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 25px 0;
-        background-color: #ffffff;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-
-    th {
-        background-color: #f9fafb;
-        color: #111827;
-        font-weight: 700;
-        padding: 15px;
-        text-align: left;
-        border-bottom: 2px solid #e5e7eb;
-    }
-
-    td {
-        padding: 15px;
-        border-bottom: 1px solid #e5e7eb;
-        vertical-align: top;
-    }
-
-    tr:hover {
-        background-color: #f9fafb;
-    }
-
-    .section-header td {
-        background: linear-gradient(135deg, #d1fae5 0%, #dbeafe 100%);
-        color: #1e40af;
-        font-size: 1.1em;
-        padding: 18px 15px;
-        font-weight: 600;
-        border-left: 4px solid #10b981;
-        transition: all 0.3s ease;
-    }
-
-    .section-header:hover td {
-        background: linear-gradient(135deg, #a7f3d0 0%, #93c5fd 100%);
-        border-left-color: #3b82f6;
-    }
-
-    .lecture-title {
-        font-weight: 700;
-        color: #111827;
-        margin-bottom: 6px;
-    }
-
-    .guest-lecture {
-        color: #7c3aed;
-        font-size: 0.85em;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 6px;
-    }
-
-    .lecture-topics {
-        margin-top: 6px;
-        font-size: 0.95em;
-        color: #4b5563;
-    }
-
-    ul {
-        margin-left: 20px;
-        margin-bottom: 12px;
-    }
-
-    li {
-        margin-bottom: 8px;
-    }
-
-    .tools-list {
-        background-color: #eff6ff;
-        padding: 20px 25px;
-        border-radius: 8px;
-        border-left: 4px solid #3b82f6;
-        margin: 20px 0;
-    }
-
-    .tools-list ul {
-        list-style-type: none;
-        margin-left: 0;
-    }
-
-    .tools-list li {
-        padding-left: 25px;
-        position: relative;
-    }
-
-    .tools-list li::before {
-        content: "🔧";
-        position: absolute;
-        left: 0;
-    }
-
-    a {
-        color: #2563eb;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .part-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 25px;
-        border-radius: 8px;
-        margin: 40px 0 20px;
-    }
-
-    .part-header h2 {
-        color: white;
-        border: none;
-        margin: 0;
-        padding: 0;
-        text-align: left;
-    }
-
-    .part-subtitle {
-        font-size: 1.1em;
-        font-style: italic;
-        opacity: 0.95;
-        margin-top: 8px;
-    }
-
-    .note {
-        font-size: 0.95em;
-        color: #6b7280;
-    }
-
-    .mini {
-        font-size: 0.92em;
-        color: #6b7280;
-    }
-
-    .tag {
-        display: inline-block;
-        font-size: 0.8em;
-        font-weight: 700;
-        padding: 4px 10px;
-        border-radius: 999px;
-        border: 1px solid #e5e7eb;
-        color: #111827;
-        background: #ffffff;
-        margin-left: 8px;
-    }
-
-    .tag.deadline {
-        border-color: #fecaca;
-        background: #fef2f2;
-        color: #991b1b;
-    }
-
-    .tag.release {
-        border-color: #bfdbfe;
-        background: #eff6ff;
-        color: #1d4ed8;
-    }
-
-    .tag.milestone {
-        border-color: #bbf7d0;
-        background: #f0fdf4;
-        color: #166534;
-    }
-
-    .tag.break {
-        border-color: #e5e7eb;
-        background: #f9fafb;
-        color: #374151;
-    }
-
-    footer {
-        text-align: center;
-        padding: 40px 0 20px;
-        margin-top: 60px;
-        border-top: 2px solid #e5e7eb;
-        color: #6b7280;
-        font-size: 0.9em;
-    }
-
-    @media (max-width: 780px) {
-        .two-col {
-            grid-template-columns: 1fr;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.5;
+            color: #374151;
+            background: linear-gradient(to bottom, #f0fdf4 0%, #dbeafe 100%);
+            min-height: 100vh;
         }
-    }
 
-    @media (max-width: 480px) {
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 40px;
+        }
+
         h1 {
-            font-size: 1.8em;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 10px;
         }
 
-        table {
-            font-size: 0.9em;
+        .semester {
+            font-size: 1.2em;
+            color: #6b7280;
+            font-weight: 600;
         }
 
-        th, td {
-            padding: 10px;
+        .subtle {
+            font-size: 1em;
+            color: #6b7280;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px 0 0;
         }
 
         nav a {
-            width: 100%;
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        nav a:hover {
+            text-decoration: none;
+            border-color: #bfdbfe;
+            background: #eff6ff;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
             text-align: center;
         }
-    }
-</style>
-```
 
+        h3 {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #111827;
+            margin: 30px 0 15px;
+        }
+
+        h4 {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .announcement {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .announcement strong {
+            color: #92400e;
+        }
+
+        .info-section {
+            background-color: #f9fafb;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px 24px;
+            margin-top: 10px;
+        }
+
+        .two-col .item {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+
+        .two-col .label {
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 6px;
+        }
+
+        .two-col .value {
+            color: #374151;
+        }
+
+        .callout {
+            background-color: #ecfeff;
+            border-left: 4px solid #06b6d4;
+            padding: 16px 20px;
+            margin: 18px 0;
+            border-radius: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background-color: #f9fafb;
+            color: #111827;
+            font-weight: 700;
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+
+        tr:hover {
+            background-color: #f9fafb;
+        }
+
+        .section-header td {
+            background: linear-gradient(135deg, #d1fae5 0%, #dbeafe 100%);
+            color: #1e40af;
+            font-size: 1.1em;
+            padding: 18px 15px;
+            font-weight: 600;
+            border-left: 4px solid #10b981;
+            transition: all 0.3s ease;
+        }
+
+        .section-header:hover td {
+            background: linear-gradient(135deg, #a7f3d0 0%, #93c5fd 100%);
+            border-left-color: #3b82f6;
+        }
+
+        .lecture-title {
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 6px;
+        }
+
+        .guest-lecture {
+            color: #7c3aed;
+            font-size: 0.85em;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .lecture-topics {
+            margin-top: 6px;
+            font-size: 0.95em;
+            color: #4b5563;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .tools-list {
+            background-color: #eff6ff;
+            padding: 20px 25px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin: 20px 0;
+        }
+
+        .tools-list ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        .tools-list li {
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .tools-list li::before {
+            content: "🔧";
+            position: absolute;
+            left: 0;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .note {
+            font-size: 0.95em;
+            color: #6b7280;
+        }
+
+        .mini {
+            font-size: 0.92em;
+            color: #6b7280;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.8em;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid #e5e7eb;
+            color: #111827;
+            background: #ffffff;
+            margin-left: 8px;
+        }
+
+        .tag.deadline {
+            border-color: #fecaca;
+            background: #fef2f2;
+            color: #991b1b;
+        }
+
+        .tag.release {
+            border-color: #bfdbfe;
+            background: #eff6ff;
+            color: #1d4ed8;
+        }
+
+        .tag.milestone {
+            border-color: #bbf7d0;
+            background: #f0fdf4;
+            color: #166534;
+        }
+
+        .tag.break {
+            border-color: #e5e7eb;
+            background: #f9fafb;
+            color: #374151;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+            border-top: 2px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        /* Small UX tweaks for consolidated table */
+        details.lecture-topics summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: #2563eb;
+        }
+
+        details.lecture-topics summary:hover {
+            text-decoration: underline;
+        }
+
+        details.lecture-topics[open] summary {
+            margin-bottom: 6px;
+        }
+
+        ul.compact {
+            margin-top: 8px;
+            margin-bottom: 0;
+        }
+
+        ul.reading-list {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 780px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1>EE 290 / 194: Scalable AI</h1>
             <p class="semester">Bridging Theory, Understanding, and Practice</p>
             <p class="semester">Spring 2026 | UC Berkeley</p>
-            <p class="subtle">Treating large-scale AI systems as full-stack engineered artifacts: hardware, software, and optimization dynamics—together.</p>
+            <p class="subtle">Large-Scale AI as an End-to-End Engineering Discipline</p>
 
-```
-        <nav aria-label="Page sections">
-            <a href="#overview">Overview</a>
-            <a href="#logistics">Logistics</a>
-            <a href="#tools">Practical Tools</a>
-            <a href="#syllabus">Lecture Syllabus</a>
-            <a href="#schedule">Lecture & Deadline Schedule</a>
-            <a href="#grading">Grading & Policies</a>
-            <a href="#readings">Recommended Readings</a>
-        </nav>
-    </header>
+            <nav aria-label="Page sections">
+                <a href="#overview">Overview</a>
+                <a href="#logistics">Logistics</a>
+                <a href="#tools">Practical Tools</a>
+                <a href="#schedule">Consolidated Schedule</a>
+                <a href="#grading">Grading &amp; Policies</a>
+            </nav>
+        </header>
 
-    <div class="announcement">
-        <strong>Announcements:</strong> Course information will be updated regularly. Check back for enrollment details, assignment deadlines, and lecture materials.
-    </div>
-
-    <section id="overview">
-        <h2>Course Overview</h2>
-        <p><strong>Central inquiry:</strong> How do we build, train, and deploy large-scale AI systems by treating them as full-stack engineered artifacts, where hardware constraints, software stacks, and optimization dynamics jointly determine model behavior and performance?</p>
-        <p>This course examines the principles required to build, train, and deploy large-scale AI models. We treat large-scale AI as an end-to-end engineering discipline, where a model is a computational graph that must be trained, specialized, evaluated, deployed, monitored, and iterated on—under hard constraints from hardware, data, and serving economics.</p>
-        <p>The course follows the lifecycle end to end:</p>
-        <div class="callout">
-            <strong>Architecture → Pre-training → Post-training → Efficient inference → Applications → Research greenfields</strong>
+        <div class="announcement">
+            <strong>Announcements:</strong> Course information will be updated regularly. Check back for enrollment details, assignment deadlines, and lecture materials.
         </div>
-    </section>
 
-    <section id="logistics">
-        <h2>Logistics</h2>
-        <div class="info-section">
-            <h3>Class Logistics</h3>
-
-            <div class="two-col">
-                <div class="item">
-                    <div class="label">Course Number</div>
-                    <div class="value">EE 290 / 194</div>
-                </div>
-
-                <div class="item">
-                    <div class="label">Instructors</div>
-                    <div class="value">Jiantao Jiao; Anant Sahai</div>
-                </div>
-
-                <div class="item">
-                    <div class="label">Teaching Staff</div>
-                    <div class="value">TBD</div>
-                </div>
-
-                <div class="item">
-                    <div class="label">Lecture Time</div>
-                    <div class="value">Tuesdays & Thursdays, 9:30 AM – 11:00 AM</div>
-                </div>
-
-                <div class="item">
-                    <div class="label">Location</div>
-                    <div class="value">521 Cory Hall</div>
-                </div>
-
-                <div class="item">
-                    <div class="label">Office Hours</div>
-                    <div class="value">Tuesdays, 11:00 AM – 12:00 PM (immediately after lecture; location announced on Ed)</div>
-                </div>
-
-                <div class="item">
-                    <div class="label">Assignment Checkoffs</div>
-                    <div class="value">Checkoff slots by sign-up</div>
-                </div>
-
-                <div class="item">
-                    <div class="label">Resources</div>
-                    <div class="value">Website: TBD<br>Forum (Ed): TBD<br>Gradescope: TBD</div>
-                </div>
-            </div>
-
-            <h4>Communication</h4>
-            <p><strong>Ed only.</strong> Please post all course questions on Ed (TBD). We do not use Slack or other channels for course Q&amp;A.</p>
-
-            <h4>Compute</h4>
-            <p>Groups of <strong>4–6</strong>. Each group receives <strong>1 H100 node (8×H100)</strong> for the semester (8 total nodes on GCP). Each group is assigned a single static external IP address for SSH access.</p>
-
-            <p class="note">Course questionnaire (Week 1–2): a short onboarding questionnaire will be released in the first lecture, and enrollment/compute allocations are finalized by the end of the second week.</p>
-        </div>
-    </section>
-
-    <section id="tools">
-        <h2>Practical Tools</h2>
-        <div class="tools-list">
-            <p>Students will gain hands-on experience with industry-standard tools and frameworks throughout the course:</p>
-            <ul>
-                <li><strong><a href="https://github.com/NVIDIA-NeMo/Automodel" target="_blank" rel="noopener noreferrer">NeMo AutoModel</a>:</strong> Profiling, optimizing, and training LLMs</li>
-                <li><strong><a href="https://github.com/NVIDIA-NeMo/Curator" target="_blank" rel="noopener noreferrer">NeMo Curator</a>:</strong> Scraping, cleaning, and curating large-scale pre-training corpora</li>
-                <li><strong><a href="https://github.com/NVIDIA-NeMo/DataDesigner" target="_blank" rel="noopener noreferrer">NeMo Data Designer</a>:</strong> Building high-quality post-training datasets</li>
-                <li><strong><a href="https://github.com/NVIDIA-NeMo/RL" target="_blank" rel="noopener noreferrer">NeMo RL</a> / <a href="https://github.com/NVIDIA-NeMo/Gym" target="_blank" rel="noopener noreferrer">NeMo Gym</a>:</strong> Post-training infrastructure that powers Nemotron</li>
-                <li><strong><a href="https://github.com/NVlabs/Minitron" target="_blank" rel="noopener noreferrer">Minitron</a>:</strong> Deployment-efficiency preparation</li>
-                <li><strong><a href="https://pytorch.org/docs/stable/torch.compiler.html" target="_blank" rel="noopener noreferrer">Dynamo</a>, <a href="https://github.com/NVIDIA/TensorRT-LLM" target="_blank" rel="noopener noreferrer">TensorRT-LLM</a>, <a href="https://github.com/sgl-project/sglang" target="_blank" rel="noopener noreferrer">SGLang</a>, and <a href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener noreferrer">vLLM</a>:</strong> Efficient deployment</li>
-                <li><strong><a href="https://github.com/NVIDIA-NeMo/Guardrails" target="_blank" rel="noopener noreferrer">NeMo Guardrails</a> / <a href="https://github.com/NVIDIA/garak" target="_blank" rel="noopener noreferrer">Garak</a>:</strong> Safety during deployment</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="syllabus">
-        <h2>Course Syllabus (Lectures)</h2>
-
-        <table>
-            <thead>
-                <tr>
-                    <th style="width: 10%;">Lecture</th>
-                    <th style="width: 70%;">Topic</th>
-                    <th style="width: 20%;">Materials</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Part 1: Architecture -->
-                <tr class="section-header">
-                    <td colspan="3">
-                        <strong>Part 1: Architecture</strong> — Defining the Computational Graph and Scaling Strategies
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <div class="lecture-title">Course Overview and the Modern AI Stack</div>
-                        <div class="lecture-topics">
-                            How modern AI systems are built end-to-end:
-                            <ul>
-                                <li>Course goals, structure, and expectations</li>
-                                <li>The full-stack view: hardware ↔ software ↔ optimization</li>
-                                <li>Lifecycle map: architecture → training → post-training → inference → applications</li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>
-                        <div class="lecture-title">All About Performance</div>
-                        <div class="lecture-topics">
-                            Why performance constraints dictate model and system design:
-                            <ul>
-                                <li>Matrix multiplication as the basis of deep learning</li>
-                                <li>The Roofline model and memory bandwidth bottlenecks</li>
-                                <li>Component-level cost analysis (compute vs. memory vs. communication)</li>
-                                <li>The economics of tokens: training vs. serving tradeoffs</li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>
-                        <div class="lecture-title">Architectures To Break Bottlenecks: MoE, Sparse &amp; Long-Context Architectures</div>
-                        <div class="lecture-topics">
-                            Breaking bottlenecks through architectural changes:
-                            <ul>
-                                <li>Mixture of Experts (MoE): reducing FFN bottlenecks</li>
-                                <li>Long-context mechanisms: attention and KV-cache realities</li>
-                                <li>Sequence sharding and sparse attention patterns</li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>
-                        <div class="lecture-title">Parallelism Strategies</div>
-                        <div class="lecture-topics">
-                            Hardware-aware parallelism and orchestration:
-                            <ul>
-                                <li>Parallelism mechanics (e.g., multi-dimensional parallelism)</li>
-                                <li>Interconnect topology and communication costs</li>
-                                <li>Automated orchestration and practical scaling patterns</li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>
-                        <div class="guest-lecture">[Guest Lecture]</div>
-                        <div class="lecture-title">NeMo AutoModel</div>
-                        <div class="lecture-topics">
-                            Practical instruction for performance profiling, arithmetic intensity, and optimization workflows.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-
-                <!-- Part 2: Pre-Training -->
-                <tr class="section-header">
-                    <td colspan="3">
-                        <strong>Part 2: Pre-Training of Language Models</strong> — The Engineering of "Base Models"
-                    </td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>
-                        <div class="lecture-title">Introduction to Pre-Training</div>
-                        <div class="lecture-topics">
-                            What pre-training is and how large-scale data and training runs are built:
-                            <ul>
-                                <li>Tokenization fundamentals</li>
-                                <li>The causal language modeling (CLM) task</li>
-                                <li>Pre-training fundamentals and scaling considerations</li>
-                                <li>How to evaluate pre-trained models</li>
-                                <li>Data curation: deduplication, quality filtering, and mixture design</li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>
-                        <div class="guest-lecture">[Guest Lecture]</div>
-                        <div class="lecture-title">Powering Pre-Training: NeMo Curator</div>
-                        <div class="lecture-topics">
-                            Hands-on curating work with NeMo Curator: building usable pre-training datasets.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>
-                        <div class="lecture-title">Case Study: The Pre-Training of Nano-V3</div>
-                        <div class="lecture-topics">
-                            A deep dive into pre-training data, evaluation, ablations, and the final “hero run” design choices.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>
-                        <div class="lecture-title">Optimizer Fundamentals</div>
-                        <div class="lecture-topics">
-                            Foundations of optimization at scale:
-                            <ul>
-                                <li>SGD-family methods and adaptive optimizers (Adam/AdamW)</li>
-                                <li>Learning rate schedules, warmup, and stability</li>
-                                <li>Gradient clipping, normalization, and numerics</li>
-                                <li>Batch size, effective step size, and scaling behavior</li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>
-                        <div class="lecture-title">Looking To The Future: Emerging Optimizers</div>
-                        <div class="lecture-topics">
-                            Moving beyond AdamW to emerging approaches (e.g., Muon, SOAP), and how to reason about their tradeoffs at scale.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-
-                <!-- Part 3: Post-Training -->
-                <tr class="section-header">
-                    <td colspan="3">
-                        <strong>Part 3: Post-Training of Language Models</strong> — Specializing Models Through SFT and RL
-                    </td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>
-                        <div class="lecture-title">Intro To the LLM Post-Training Lifecycle and Evaluation</div>
-                        <div class="lecture-topics">
-                            The pre-training → SFT → RL paradigm and how to measure progress:
-                            <ul>
-                                <li>Differences between pre-training and post-training data</li>
-                                <li>Chat templating and training fundamentals</li>
-                                <li>Post-training benchmarks and evaluation practices</li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>
-                        <div class="lecture-title">The Data Powering Post-Training: SFT Data Engineering and RL Environments</div>
-                        <div class="lecture-topics">
-                            Constructing datasets and environments that drive alignment and capability:
-                            <ul>
-                                <li>Synthetic data generation pipelines</li>
-                                <li>Rejection sampling and quality scoring</li>
-                                <li>Skills mixtures and data balancing</li>
-                                <li>RL environment construction and reward design basics</li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>
-                        <div class="guest-lecture">[Guest Lecture]</div>
-                        <div class="lecture-title">Building SFT Datasets: Foundations of SFT Data Generation and Tooling</div>
-                        <div class="lecture-topics">
-                            Patterns and tooling for scalable SFT dataset creation (human + synthetic pipelines), including quality controls and reproducibility.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>
-                        <div class="lecture-title">NeMo Data Designer Deep Dive</div>
-                        <div class="lecture-topics">
-                            A practical walkthrough of NeMo Data Designer for building and iterating on high-quality post-training datasets.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>
-                        <div class="guest-lecture">[Guest Lecture]</div>
-                        <div class="lecture-title">Using The NeMo RL Stack For RL Post-Training</div>
-                        <div class="lecture-topics">
-                            Post-training with the NeMo RL stack: infrastructure, workflows, and evaluation in practice.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>16</td>
-                    <td>
-                        <div class="guest-lecture">[Guest Lecture]</div>
-                        <div class="lecture-title">Case Study: Post-Training of Nemotron-NanoV3</div>
-                        <div class="lecture-topics">
-                            A detailed case study of post-training decisions, data strategy, and evaluation tradeoffs in practice.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-
-                <!-- Part 4: Efficient Inference -->
-                <tr class="section-header">
-                    <td colspan="3">
-                        <strong>Part 4: Efficient Inference</strong> — Deployment Preparation and High-Performance Frameworks
-                    </td>
-                </tr>
-                <tr>
-                    <td>17</td>
-                    <td>
-                        <div class="guest-lecture">[Guest Lecture]</div>
-                        <div class="lecture-title">Deployment Preparation: Speculative Decoding, Quantization, Pruning, and NAS</div>
-                        <div class="lecture-topics">
-                            Deployment efficiency preparation:
-                            <ul>
-                                <li>Speculative decoding: concepts and systems implications</li>
-                                <li>Advanced data types and quantization paradigms</li>
-                                <li>Calibration strategies and accuracy tradeoffs</li>
-                                <li>Pruning and neural architecture search (NAS) for inference efficiency</li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>
-                        <div class="lecture-title">Fundamentals and Overview of High-Performance Inference Frameworks</div>
-                        <div class="lecture-topics">
-                            A systems overview of modern inference engines, batching/scheduling, memory management, and throughput/latency tradeoffs.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>19</td>
-                    <td>
-                        <div class="guest-lecture">[Guest Lecture]</div>
-                        <div class="lecture-title">High-Performance Inference using Dynamo and TRT-LLM</div>
-                        <div class="lecture-topics">
-                            Compilation and runtime strategies for production inference, including graph capture, kernel selection, and end-to-end profiling.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>20</td>
-                    <td>
-                        <div class="lecture-title">High-Performance Inference using vLLM and SGLang</div>
-                        <div class="lecture-topics">
-                            Serving engines and control runtimes for LLM applications: throughput optimization, KV cache management, and efficient scheduling.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-
-                <!-- Part 5: LLM Applications -->
-                <tr class="section-header">
-                    <td colspan="3">
-                        <strong>Part 5: LLM Applications and Use Cases</strong> — Building Real-World AI Systems
-                    </td>
-                </tr>
-                <tr>
-                    <td>21</td>
-                    <td>
-                        <div class="lecture-title">Fundamentals of Context Engineering</div>
-                        <div class="lecture-topics">
-                            Designing prompts, retrieval, memory, and tool usage under latency/cost constraints and reliability targets.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>22</td>
-                    <td>
-                        <div class="guest-lecture">[Guest Lecture]</div>
-                        <div class="lecture-title">Agentic Applications</div>
-                        <div class="lecture-topics">
-                            Building agentic systems: planning, tool use, orchestration, evaluation, and failure modes.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>23</td>
-                    <td>
-                        <div class="guest-lecture">[Guest Lecture]</div>
-                        <div class="lecture-title">Safety Guardrails</div>
-                        <div class="lecture-topics">
-                            Deployment-time safety: guardrails, red teaming, monitoring, and risk mitigation in real systems.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-
-                <!-- Part 6: Research Greenfields -->
-                <tr class="section-header">
-                    <td colspan="3">
-                        <strong>Part 6: Research Greenfields</strong> — Emerging Research Directions
-                    </td>
-                </tr>
-                <tr>
-                    <td>24</td>
-                    <td>
-                        <div class="lecture-title">Diffusion Language Models</div>
-                        <div class="lecture-topics">
-                            Alternative generative paradigms beyond autoregressive decoding and how they change training/inference tradeoffs.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>25</td>
-                    <td>
-                        <div class="lecture-title">Advanced RL Algorithms</div>
-                        <div class="lecture-topics">
-                            Modern RL methods relevant to post-training and agentic systems, including credit assignment and stability at scale.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>26</td>
-                    <td>
-                        <div class="lecture-title">Multi-Agent Systems and Architecture</div>
-                        <div class="lecture-topics">
-                            Multi-agent coordination, communication, and architecture patterns for scalable AI systems.
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <p class="mini">Note: Guest speakers and exact ordering are subject to change. Deadlines and project milestones appear in the schedule below.</p>
-    </section>
-
-    <section id="schedule">
-        <h2>Lecture &amp; Deadline Schedule</h2>
-        <div class="info-section">
-            <p class="note">Schedule assumes Tuesday/Thursday meetings. Deadlines (assignments and project milestones) are included directly below.</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 18%;">Date</th>
-                        <th style="width: 55%;">Lecture / Event</th>
-                        <th style="width: 27%;">Notes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="section-header">
-                        <td colspan="3"><strong>Part 1: Architecture</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Jan 20</td>
-                        <td>L1. Course Overview and the Modern AI Stack</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Jan 20</td>
-                        <td>Milestones/Releases: Questionnaire released <span class="tag milestone">Milestone</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Jan 22</td>
-                        <td>L2. All About Performance</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Jan 22</td>
-                        <td>Project release: Research directions released <span class="tag release">Release</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Jan 27</td>
-                        <td>L3. Architectures To Break Bottlenecks: MoE, Sparse &amp; Long-Context Architectures</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Jan 27</td>
-                        <td>Release: A1 released (Parallelism Assignment) <span class="tag release">Release</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Jan 29</td>
-                        <td>L4. Parallelism Strategies</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Jan 29</td>
-                        <td>Group formation due; questionnaire decisions finalized <span class="tag milestone">Milestone</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Feb 3</td>
-                        <td>L5. NeMo AutoModel Guest Lecture</td>
-                        <td>Guest (AutoModel)</td>
-                    </tr>
-
-                    <tr class="section-header">
-                        <td colspan="3"><strong>Part 2: Pre-Training of Language Models</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Feb 5</td>
-                        <td>L6. Introduction to Pre-Training</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Feb 10</td>
-                        <td>L7. Powering Pre-Training: NeMo Curator</td>
-                        <td>Guest (Curator)</td>
-                    </tr>
-                    <tr>
-                        <td>Feb 10</td>
-                        <td>A1 due; A2 released (Pre-Training Assignment) <span class="tag deadline">Deadline</span> <span class="tag release">Release</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Feb 12</td>
-                        <td>L8. Case Study: The Pre-Training of Nano-V3</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Feb 12</td>
-                        <td>Hypothesis statement v1 due <span class="tag milestone">Milestone</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Feb 17</td>
-                        <td>L9. Optimizer Fundamentals</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Feb 19</td>
-                        <td>L10. Looking To The Future: Emerging Optimizers</td>
-                        <td></td>
-                    </tr>
-
-                    <tr class="section-header">
-                        <td colspan="3"><strong>Part 3: Post-Training of Language Models</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Feb 24</td>
-                        <td>L11. Intro To the LLM Post-Training Lifecycle and Evaluation</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Feb 24</td>
-                        <td>A2 due; A3 released (Post-Training Assignment) <span class="tag deadline">Deadline</span> <span class="tag release">Release</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Feb 26</td>
-                        <td>L12. The Data Powering Post-Training: SFT Data Engineering and RL Environments</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Feb 26</td>
-                        <td>Project proposal v2 due <span class="tag milestone">Milestone</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Mar 3</td>
-                        <td>L13. Building SFT Datasets: Foundations of SFT Data Generation and Tooling</td>
-                        <td>Guest</td>
-                    </tr>
-                    <tr>
-                        <td>Mar 5</td>
-                        <td>L14. NeMo Data Designer Deep Dive</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Mar 10</td>
-                        <td>L15. Using The NeMo RL Stack For RL Post-Training</td>
-                        <td>Guest</td>
-                    </tr>
-                    <tr>
-                        <td>Mar 10</td>
-                        <td>A3 due (Post-Training Assignment) <span class="tag deadline">Deadline</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Mar 12</td>
-                        <td>L16. Case Study: Post-Training of Nemotron-NanoV3</td>
-                        <td>Guest</td>
-                    </tr>
-
-                    <tr class="section-header">
-                        <td colspan="3"><strong>Part 4: Efficient Inference</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Mar 17</td>
-                        <td>L17. Deployment Preparation: Speculative Decoding, Quantization, Pruning, and NAS</td>
-                        <td>Guest</td>
-                    </tr>
-                    <tr>
-                        <td>Mar 17</td>
-                        <td>A4 released (Inference and Serving Assignment) <span class="tag release">Release</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Mar 19</td>
-                        <td>L18. Fundamentals and Overview of High-Performance Inference Frameworks</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Mar 19</td>
-                        <td>Midterm check-in report due <span class="tag milestone">Milestone</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Mar 24</td>
-                        <td>Spring Recess <span class="tag break">No class</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Mar 26</td>
-                        <td>Spring Recess <span class="tag break">No class</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Mar 31</td>
-                        <td>L19. High-Performance Inference using Dynamo and TRT-LLM</td>
-                        <td>Guest</td>
-                    </tr>
-                    <tr>
-                        <td>Apr 2</td>
-                        <td>L20. High-Performance Inference using vLLM and SGLang</td>
-                        <td></td>
-                    </tr>
-
-                    <tr class="section-header">
-                        <td colspan="3"><strong>Part 5: LLM Applications and Use Cases</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Apr 7</td>
-                        <td>L21. Fundamentals of Context Engineering</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Apr 7</td>
-                        <td>A4 due; A5 released (Applications Assignment) <span class="tag deadline">Deadline</span> <span class="tag release">Release</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Apr 9</td>
-                        <td>L22. Agentic Applications</td>
-                        <td>Guest</td>
-                    </tr>
-                    <tr>
-                        <td>Apr 14</td>
-                        <td>L23. Safety Guardrails</td>
-                        <td>Guest</td>
-                    </tr>
-
-                    <tr class="section-header">
-                        <td colspan="3"><strong>Part 6: Research Greenfields</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Apr 16</td>
-                        <td>L24. Diffusion Language Models</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Apr 21</td>
-                        <td>L25. Advanced RL Algorithms</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Apr 21</td>
-                        <td>A5 due (Applications Assignment) <span class="tag deadline">Deadline</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Apr 23</td>
-                        <td>L26. Multi-Agent Systems and Architecture</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Apr 26</td>
-                        <td>Draft project report due <span class="tag milestone">Milestone</span></td>
-                        <td>Submit on Gradescope</td>
-                    </tr>
-                    <tr>
-                        <td>Apr 28</td>
-                        <td>Project Presentations (Session A) <span class="tag milestone">Milestone</span></td>
-                        <td>Week prior to RRR week</td>
-                    </tr>
-                    <tr>
-                        <td>Apr 30</td>
-                        <td>Project Presentations (Session B) <span class="tag milestone">Milestone</span></td>
-                        <td>Week prior to RRR week</td>
-                    </tr>
-                    <tr>
-                        <td>May 1</td>
-                        <td>Peer review due <span class="tag milestone">Milestone</span></td>
-                        <td>Submit on Gradescope</td>
-                    </tr>
-                    <tr>
-                        <td>May 5</td>
-                        <td>Poster session (RRR Week) <span class="tag milestone">Milestone</span></td>
-                        <td>No formal lecture</td>
-                    </tr>
-                    <tr>
-                        <td>May 10</td>
-                        <td>Final deliverables due <span class="tag milestone">Milestone</span></td>
-                        <td>Code + final report</td>
-                    </tr>
-                    <tr>
-                        <td>May 15</td>
-                        <td>Impact update <span class="tag milestone">Milestone</span></td>
-                        <td>Proof of impact document</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <section id="grading">
-        <h2>Grading &amp; Policies</h2>
-        <div class="info-section">
-            <h3>Grading Breakdown</h3>
-            <p>This course has <strong>no exams</strong>. Evaluation is based on assignments, a semester-long research project, scribing, and participation.</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 70%;">Component</th>
-                        <th style="width: 30%;">Weight</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Research project</td>
-                        <td>50%</td>
-                    </tr>
-                    <tr>
-                        <td>Assignments</td>
-                        <td>35%</td>
-                    </tr>
-                    <tr>
-                        <td>Scribing (2 lectures per student)</td>
-                        <td>5%</td>
-                    </tr>
-                    <tr>
-                        <td>Attendance &amp; participation</td>
-                        <td>10%</td>
-                    </tr>
-                </tbody>
-            </table>
-
+        <section id="overview">
+            <h2>Course Overview</h2>
+            <p><strong>Central inquiry:</strong> How do we build, train, and deploy large-scale AI systems by treating them as full-stack engineered artifacts, where hardware constraints, software stacks, and optimization dynamics jointly determine model behavior and performance?</p>
+            <p>This course examines the principles required to build, train, and deploy large-scale AI models. We treat large-scale AI as an end-to-end engineering discipline, where a model is a computational graph that must be trained, specialized, evaluated, deployed, monitored, and iterated on—under hard constraints from hardware, data, and serving economics.</p>
+            <p>The course follows the lifecycle end to end:</p>
             <div class="callout">
-                <strong>Important:</strong> Failing any one component fails the class. You must complete every component satisfactorily.
+                <strong>Architecture → Pre-training → Post-training → Efficient inference → Applications → Research greenfields</strong>
             </div>
+        </section>
 
-            <h3>Commitment &amp; Letter Grading</h3>
-            <p>This course requires sustained weekly engagement (group work, compute usage, and in-person checkoffs). <strong>Letter grade only</strong> (no Satisfactory/Non-Satisfactory).</p>
+        <section id="logistics">
+            <h2>Logistics</h2>
+            <div class="info-section">
+                <h3>Class Logistics</h3>
 
-            <h3>Assignments</h3>
-            <p>There are five group-based assignments, each spanning roughly 2–3 weeks. Assignments include conceptual questions and hands-on experiments (implementation, profiling, scaling, analysis) with an in-person oral checkoff/presentation per assignment.</p>
+                <div class="two-col">
+                    <div class="item">
+                        <div class="label">Course Number</div>
+                        <div class="value">EE 290 / 194</div>
+                    </div>
 
-            <h4>Late Policy</h4>
-            <p>You have <strong>3 total slack days</strong> across the semester for assignments. At most <strong>one slack day</strong> may be applied to any single assignment (extends deadline by 24 hours). No other late work is accepted without an approved exception.</p>
+                    <div class="item">
+                        <div class="label">Instructors</div>
+                        <div class="value">Jiantao Jiao; Anant Sahai</div>
+                    </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 20%;">Assignment</th>
-                        <th style="width: 45%;">Topic</th>
-                        <th style="width: 17.5%;">Release</th>
-                        <th style="width: 17.5%;">Due</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>A1</td>
-                        <td>Parallelism Assignment</td>
-                        <td>Jan 27</td>
-                        <td>Feb 10</td>
-                    </tr>
-                    <tr>
-                        <td>A2</td>
-                        <td>Pre-Training Assignment</td>
-                        <td>Feb 10</td>
-                        <td>Feb 24</td>
-                    </tr>
-                    <tr>
-                        <td>A3</td>
-                        <td>Post-Training Assignment</td>
-                        <td>Feb 24</td>
-                        <td>Mar 10</td>
-                    </tr>
-                    <tr>
-                        <td>A4</td>
-                        <td>Inference and Serving Assignment</td>
-                        <td>Mar 17</td>
-                        <td>Apr 7</td>
-                    </tr>
-                    <tr>
-                        <td>A5</td>
-                        <td>Applications Assignment</td>
-                        <td>Apr 7</td>
-                        <td>Apr 21</td>
-                    </tr>
-                </tbody>
-            </table>
+                    <div class="item">
+                        <div class="label">Teaching Staff</div>
+                        <div class="value">TBD</div>
+                    </div>
 
-            <h3>Research Project</h3>
-            <p>The research project is group-based and open-ended, with an emphasis on producing something useful to the community.</p>
-            <ul>
-                <li><strong>Technical quality (40%):</strong> hypothesis clarity, depth, correctness, rigor, and artifact quality (code + report + other deliverables).</li>
-                <li><strong>Impact (10%):</strong> evidence of external usefulness (e.g., PR merged into open source, reproducible benchmark, public report, arXiv preprint).</li>
-                <li><strong>Peer review:</strong> each group provides a structured review of another group’s report.</li>
-            </ul>
+                    <div class="item">
+                        <div class="label">Lecture Time</div>
+                        <div class="value">Tuesdays &amp; Thursdays, 9:30 AM – 11:00 AM</div>
+                    </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 30%;">Milestone</th>
-                        <th style="width: 20%;">Due</th>
-                        <th style="width: 50%;">Notes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Research directions released</td>
-                        <td>Jan 22</td>
-                        <td>Posted on course site; brainstorming begins</td>
-                    </tr>
-                    <tr>
-                        <td>Group formation</td>
-                        <td>Jan 29</td>
-                        <td>Groups of 4–6; node assigned</td>
-                    </tr>
-                    <tr>
-                        <td>Hypothesis statement v1</td>
-                        <td>Feb 12</td>
-                        <td>One paragraph hypothesis + success metric</td>
-                    </tr>
-                    <tr>
-                        <td>Project proposal v2</td>
-                        <td>Feb 26</td>
-                        <td>2–3 pages: method, evaluation plan, risks</td>
-                    </tr>
-                    <tr>
-                        <td>Midterm check-in</td>
-                        <td>Mar 19</td>
-                        <td>Milestone report; check-in meetings scheduled around this date</td>
-                    </tr>
-                    <tr>
-                        <td>Draft report</td>
-                        <td>Apr 26</td>
-                        <td>Submitted for peer review (Gradescope)</td>
-                    </tr>
-                    <tr>
-                        <td>Final presentations</td>
-                        <td>Apr 28/30</td>
-                        <td>Short talks in the week prior to RRR week</td>
-                    </tr>
-                    <tr>
-                        <td>Peer review due</td>
-                        <td>May 1</td>
-                        <td>Submitted via Gradescope</td>
-                    </tr>
-                    <tr>
-                        <td>Poster session</td>
-                        <td>May 5</td>
-                        <td>RRR week poster session</td>
-                    </tr>
-                    <tr>
-                        <td>Final deliverables</td>
-                        <td>May 10</td>
-                        <td>Code + final report</td>
-                    </tr>
-                    <tr>
-                        <td>Impact update close</td>
-                        <td>May 15</td>
-                        <td>Proof of merge/acceptance or submission evidence</td>
-                    </tr>
-                </tbody>
-            </table>
+                    <div class="item">
+                        <div class="label">Location</div>
+                        <div class="value">521 Cory Hall</div>
+                    </div>
 
-            <h3>Scribing</h3>
-            <p>Each student is expected to scribe <strong>2 lectures</strong>. Scribe assignments will be posted on Ed. LLM assistance may be used for drafting, but the final scribe must be accurate, edited, and clearly written. If you use external sources or AI tools, cite them clearly.</p>
+                    <div class="item">
+                        <div class="label">Office Hours</div>
+                        <div class="value">Tuesdays, 11:00 AM – 12:00 PM (immediately after lecture; location announced on Ed)</div>
+                    </div>
 
-            <h3>Attendance &amp; Participation</h3>
-            <p>Attendance is required. Participation includes contributing to in-class discussions and project check-ins, posting/answering on Ed, and providing constructive comments on lecture notes and slides.</p>
+                    <div class="item">
+                        <div class="label">Assignment Checkoffs</div>
+                        <div class="value">Checkoff slots by sign-up</div>
+                    </div>
 
-            <h3>Academic Integrity</h3>
-            <p>Collaboration is encouraged within your group. Do not copy code or reports from other groups. If you use external code or AI assistants, cite the source clearly and ensure you understand the work you submit.</p>
+                    <div class="item">
+                        <div class="label">Resources</div>
+                        <div class="value">Website: TBD<br>Forum (Ed): TBD<br>Gradescope: TBD</div>
+                    </div>
+                </div>
 
-            <h3>Infrastructure Notes</h3>
-            <p>This course uses shared GPU infrastructure. For access/quota/networking issues, post on Ed and include timestamps, job IDs, logs, and a short repro description. Multi-node experiments require coordinating with another team to share nodes for a bounded window of time.</p>
+                <h4>Communication</h4>
+                <p><strong>Ed only.</strong> Please post all course questions on Ed (TBD). We do not use Slack or other channels for course Q&amp;A.</p>
 
-            <p class="mini">Submission platform (Gradescope): all written and code submissions are via Gradescope (TBD), unless explicitly stated otherwise. Oral presentations/checkoffs require sign-up and in-person attendance.</p>
-        </div>
-    </section>
+                <h4>Compute</h4>
+                <p>Groups of <strong>4–6</strong>. Each group receives <strong>1 H100 node (8×H100)</strong> for the semester (8 total nodes on GCP). Each group is assigned a single static external IP address for SSH access.</p>
 
-    <section id="readings">
-        <h2>Recommended Readings</h2>
-        <div class="info-section">
-            <p class="note">The readings below are suggested (not mandatory) to deepen understanding of lecture topics. Entries not listed are intentionally left blank.</p>
+                <p class="note">Course questionnaire (Week 1–2): a short onboarding questionnaire will be released in the first lecture, and enrollment/compute allocations are finalized by the end of the second week.</p>
+            </div>
+        </section>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 12%;">Lecture</th>
-                        <th style="width: 88%;">Readings</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="section-header">
-                        <td colspan="2"><strong>Part 1: Architecture</strong></td>
-                    </tr>
-                    <tr>
-                        <td>L1</td>
-                        <td>
-                            <ul>
-                                <li>“The Bitter Lesson” — Rich Sutton</li>
-                                <li>“The Hardware Lottery” — Sara Hooker</li>
-                                <li>“Training Compute-Optimal Large Language Models” — Hoffmann et al. (Chinchilla)</li>
-                                <li><a href="https://arxiv.org/pdf/2304.10557" target="_blank" rel="noopener noreferrer">“An introduction to transformers” — Turner</a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>L2</td>
-                        <td>
-                            <ul>
-                                <li><a href="https://jax-ml.github.io/scaling-book/" target="_blank" rel="noopener noreferrer">How to Scale Your Model</a> (Scaling Book), Chapters 1, 4, and 7</li>
-                                <li><a href="https://horace.io/brrr_intro.html" target="_blank" rel="noopener noreferrer">BRRR Intro</a></li>
-                                <li><a href="https://github.com/wafer-ai/gpu-perf-engineering-resources?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">GPU performance engineering resources</a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>L3</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>L4</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>L5</td>
-                        <td></td>
-                    </tr>
+        <section id="tools">
+            <h2>Practical Tools</h2>
+            <div class="tools-list">
+                <p>Students will gain hands-on experience with industry-standard tools and frameworks throughout the course:</p>
+                <ul>
+                    <li><strong><a href="https://github.com/NVIDIA-NeMo/Automodel" target="_blank" rel="noopener noreferrer">NeMo AutoModel</a>:</strong> Profiling, optimizing, and training LLMs</li>
+                    <li><strong><a href="https://github.com/NVIDIA-NeMo/Curator" target="_blank" rel="noopener noreferrer">NeMo Curator</a>:</strong> Scraping, cleaning, and curating large-scale pre-training corpora</li>
+                    <li><strong><a href="https://github.com/NVIDIA-NeMo/DataDesigner" target="_blank" rel="noopener noreferrer">NeMo Data Designer</a>:</strong> Building high-quality post-training datasets</li>
+                    <li><strong><a href="https://github.com/NVIDIA-NeMo/RL" target="_blank" rel="noopener noreferrer">NeMo RL</a> / <a href="https://github.com/NVIDIA-NeMo/Gym" target="_blank" rel="noopener noreferrer">NeMo Gym</a>:</strong> Post-training infrastructure that powers Nemotron</li>
+                    <li><strong><a href="https://github.com/NVlabs/Minitron" target="_blank" rel="noopener noreferrer">Minitron</a>:</strong> Deployment-efficiency preparation</li>
+                    <li><strong><a href="https://pytorch.org/docs/stable/torch.compiler.html" target="_blank" rel="noopener noreferrer">Dynamo</a>, <a href="https://github.com/NVIDIA/TensorRT-LLM" target="_blank" rel="noopener noreferrer">TensorRT-LLM</a>, <a href="https://github.com/sgl-project/sglang" target="_blank" rel="noopener noreferrer">SGLang</a>, and <a href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener noreferrer">vLLM</a>:</strong> Efficient deployment</li>
+                    <li><strong><a href="https://github.com/NVIDIA-NeMo/Guardrails" target="_blank" rel="noopener noreferrer">NeMo Guardrails</a> / <a href="https://github.com/NVIDIA/garak" target="_blank" rel="noopener noreferrer">Garak</a>:</strong> Safety during deployment</li>
+                </ul>
+            </div>
+        </section>
 
-                    <tr class="section-header">
-                        <td colspan="2"><strong>Part 2: Pre-Training of Language Models</strong></td>
-                    </tr>
-                    <tr><td>L6</td><td></td></tr>
-                    <tr><td>L7</td><td></td></tr>
-                    <tr><td>L8</td><td></td></tr>
-                    <tr><td>L9</td><td></td></tr>
-                    <tr><td>L10</td><td></td></tr>
+        <section id="schedule">
+            <h2>Consolidated Schedule</h2>
+            <div class="info-section">
+                <p class="note">
+                    Everything in one place: lecture plan, dated timeline, deadlines/milestones, and recommended readings.
+                    Dates below are for <strong>Spring 2026</strong>. Guest speakers and exact ordering are subject to change.
+                </p>
 
-                    <tr class="section-header">
-                        <td colspan="2"><strong>Part 3: Post-Training of Language Models</strong></td>
-                    </tr>
-                    <tr><td>L11</td><td></td></tr>
-                    <tr><td>L12</td><td></td></tr>
-                    <tr><td>L13</td><td></td></tr>
-                    <tr><td>L14</td><td></td></tr>
-                    <tr><td>L15</td><td></td></tr>
-                    <tr><td>L16</td><td></td></tr>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 14%;">Date</th>
+                            <th style="width: 52%;">Lecture / Events</th>
+                            <th style="width: 24%;">Recommended Readings</th>
+                            <th style="width: 10%;">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Part 1 -->
+                        <tr class="section-header">
+                            <td colspan="4"><strong>Part 1: Architecture</strong> — Defining the Computational Graph and Scaling Strategies</td>
+                        </tr>
 
-                    <tr class="section-header">
-                        <td colspan="2"><strong>Part 4: Efficient Inference</strong></td>
-                    </tr>
-                    <tr><td>L17</td><td></td></tr>
-                    <tr>
-                        <td>L18</td>
-                        <td>
-                            <ul>
-                                <li><a href="https://www.aleksagordic.com/blog/vllm" target="_blank" rel="noopener noreferrer">vLLM overview (blog)</a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr><td>L19</td><td></td></tr>
-                    <tr><td>L20</td><td></td></tr>
+                        <tr>
+                            <td>Jan 20</td>
+                            <td>
+                                <div class="lecture-title">L1. Course Overview and the Modern AI Stack</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <ul class="compact">
+                                        <li>Course goals, structure, and expectations</li>
+                                        <li>The full-stack view: hardware ↔ software ↔ optimization</li>
+                                        <li>Lifecycle map: architecture → training → post-training → inference → applications</li>
+                                    </ul>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>Questionnaire released <span class="tag milestone">Milestone</span></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="reading-list">
+                                    <li>“The Bitter Lesson” — Rich Sutton</li>
+                                    <li>“The Hardware Lottery” — Sara Hooker</li>
+                                    <li>“Training Compute-Optimal Large Language Models” — Hoffmann et al. (Chinchilla)</li>
+                                    <li><a href="https://arxiv.org/pdf/2304.10557" target="_blank" rel="noopener noreferrer">“An introduction to transformers” — Turner</a></li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
 
-                    <tr class="section-header">
-                        <td colspan="2"><strong>Part 5: LLM Applications and Use Cases</strong></td>
-                    </tr>
-                    <tr><td>L21</td><td></td></tr>
-                    <tr><td>L22</td><td></td></tr>
-                    <tr><td>L23</td><td></td></tr>
+                        <tr>
+                            <td>Jan 22</td>
+                            <td>
+                                <div class="lecture-title">L2. All About Performance</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <ul class="compact">
+                                        <li>Matrix multiplication as the basis of deep learning</li>
+                                        <li>The Roofline model and memory bandwidth bottlenecks</li>
+                                        <li>Component-level cost analysis (compute vs. memory vs. communication)</li>
+                                        <li>The economics of tokens: training vs. serving tradeoffs</li>
+                                    </ul>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>Research directions released <span class="tag release">Release</span></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="reading-list">
+                                    <li><a href="https://jax-ml.github.io/scaling-book/" target="_blank" rel="noopener noreferrer">How to Scale Your Model</a> (Scaling Book), Chapters 1, 4, and 7</li>
+                                    <li><a href="https://horace.io/brrr_intro.html" target="_blank" rel="noopener noreferrer">BRRR Intro</a></li>
+                                    <li><a href="https://github.com/wafer-ai/gpu-perf-engineering-resources?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">GPU performance engineering resources</a></li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
 
-                    <tr class="section-header">
-                        <td colspan="2"><strong>Part 6: Research Greenfields</strong></td>
-                    </tr>
-                    <tr><td>L24</td><td></td></tr>
-                    <tr><td>L25</td><td></td></tr>
-                    <tr><td>L26</td><td></td></tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+                        <tr>
+                            <td>Jan 27</td>
+                            <td>
+                                <div class="lecture-title">L3. Architectures To Break Bottlenecks: MoE, Sparse &amp; Long-Context Architectures</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <ul class="compact">
+                                        <li>Mixture of Experts (MoE): reducing FFN bottlenecks</li>
+                                        <li>Long-context mechanisms: attention and KV-cache realities</li>
+                                        <li>Sequence sharding and sparse attention patterns</li>
+                                    </ul>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>A1 released (Parallelism Assignment) <span class="tag release">Release</span></li>
+                                </ul>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
 
-    <footer>
-        <p>This page was generated for GitHub Pages.</p>
-    </footer>
-</div>
+                        <tr>
+                            <td>Jan 29</td>
+                            <td>
+                                <div class="lecture-title">L4. Parallelism Strategies</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <ul class="compact">
+                                        <li>Parallelism mechanics (e.g., multi-dimensional parallelism)</li>
+                                        <li>Interconnect topology and communication costs</li>
+                                        <li>Automated orchestration and practical scaling patterns</li>
+                                    </ul>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>Group formation due; questionnaire decisions finalized <span class="tag milestone">Milestone</span></li>
+                                </ul>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
 
+                        <tr>
+                            <td>Feb 3</td>
+                            <td>
+                                <div class="guest-lecture">[Guest Lecture]</div>
+                                <div class="lecture-title">L5. NeMo AutoModel</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Practical instruction for performance profiling, arithmetic intensity, and optimization workflows.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td class="mini">Guest (AutoModel)</td>
+                        </tr>
 
+                        <!-- Part 2 -->
+                        <tr class="section-header">
+                            <td colspan="4"><strong>Part 2: Pre-Training of Language Models</strong> — The Engineering of “Base Models”</td>
+                        </tr>
+
+                        <tr>
+                            <td>Feb 5</td>
+                            <td>
+                                <div class="lecture-title">L6. Introduction to Pre-Training</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <ul class="compact">
+                                        <li>Tokenization fundamentals</li>
+                                        <li>The causal language modeling (CLM) task</li>
+                                        <li>Pre-training fundamentals and scaling considerations</li>
+                                        <li>How to evaluate pre-trained models</li>
+                                        <li>Data curation: deduplication, quality filtering, and mixture design</li>
+                                    </ul>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Feb 10</td>
+                            <td>
+                                <div class="guest-lecture">[Guest Lecture]</div>
+                                <div class="lecture-title">L7. Powering Pre-Training: NeMo Curator</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Hands-on curating work with NeMo Curator: building usable pre-training datasets.
+                                    </p>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>A1 due <span class="tag deadline">Deadline</span></li>
+                                    <li>A2 released (Pre-Training Assignment) <span class="tag release">Release</span></li>
+                                </ul>
+                            </td>
+                            <td>—</td>
+                            <td class="mini">Guest (Curator)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Feb 12</td>
+                            <td>
+                                <div class="lecture-title">L8. Case Study: The Pre-Training of Nano-V3</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        A deep dive into pre-training data, evaluation, ablations, and the final “hero run” design choices.
+                                    </p>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>Hypothesis statement v1 due <span class="tag milestone">Milestone</span></li>
+                                </ul>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Feb 17</td>
+                            <td>
+                                <div class="lecture-title">L9. Optimizer Fundamentals</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <ul class="compact">
+                                        <li>SGD-family methods and adaptive optimizers (Adam/AdamW)</li>
+                                        <li>Learning rate schedules, warmup, and stability</li>
+                                        <li>Gradient clipping, normalization, and numerics</li>
+                                        <li>Batch size, effective step size, and scaling behavior</li>
+                                    </ul>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Feb 19</td>
+                            <td>
+                                <div class="lecture-title">L10. Looking To The Future: Emerging Optimizers</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Moving beyond AdamW to emerging approaches (e.g., Muon, SOAP), and how to reason about their tradeoffs at scale.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <!-- Part 3 -->
+                        <tr class="section-header">
+                            <td colspan="4"><strong>Part 3: Post-Training of Language Models</strong> — Specializing Models Through SFT and RL</td>
+                        </tr>
+
+                        <tr>
+                            <td>Feb 24</td>
+                            <td>
+                                <div class="lecture-title">L11. Intro To the LLM Post-Training Lifecycle and Evaluation</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <ul class="compact">
+                                        <li>Differences between pre-training and post-training data</li>
+                                        <li>Chat templating and training fundamentals</li>
+                                        <li>Post-training benchmarks and evaluation practices</li>
+                                    </ul>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>A2 due <span class="tag deadline">Deadline</span></li>
+                                    <li>A3 released (Post-Training Assignment) <span class="tag release">Release</span></li>
+                                </ul>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Feb 26</td>
+                            <td>
+                                <div class="lecture-title">L12. The Data Powering Post-Training: SFT Data Engineering and RL Environments</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <ul class="compact">
+                                        <li>Synthetic data generation pipelines</li>
+                                        <li>Rejection sampling and quality scoring</li>
+                                        <li>Skills mixtures and data balancing</li>
+                                        <li>RL environment construction and reward design basics</li>
+                                    </ul>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>Project proposal v2 due <span class="tag milestone">Milestone</span></li>
+                                </ul>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Mar 3</td>
+                            <td>
+                                <div class="guest-lecture">[Guest Lecture]</div>
+                                <div class="lecture-title">L13. Building SFT Datasets: Foundations of SFT Data Generation and Tooling</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Patterns and tooling for scalable SFT dataset creation (human + synthetic pipelines), including quality controls and reproducibility.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td class="mini">Guest</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mar 5</td>
+                            <td>
+                                <div class="lecture-title">L14. NeMo Data Designer Deep Dive</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        A practical walkthrough of NeMo Data Designer for building and iterating on high-quality post-training datasets.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Mar 10</td>
+                            <td>
+                                <div class="guest-lecture">[Guest Lecture]</div>
+                                <div class="lecture-title">L15. Using The NeMo RL Stack For RL Post-Training</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Post-training with the NeMo RL stack: infrastructure, workflows, and evaluation in practice.
+                                    </p>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>A3 due (Post-Training Assignment) <span class="tag deadline">Deadline</span></li>
+                                </ul>
+                            </td>
+                            <td>—</td>
+                            <td class="mini">Guest</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mar 12</td>
+                            <td>
+                                <div class="guest-lecture">[Guest Lecture]</div>
+                                <div class="lecture-title">L16. Case Study: Post-Training of Nemotron-NanoV3</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        A detailed case study of post-training decisions, data strategy, and evaluation tradeoffs in practice.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td class="mini">Guest</td>
+                        </tr>
+
+                        <!-- Part 4 -->
+                        <tr class="section-header">
+                            <td colspan="4"><strong>Part 4: Efficient Inference</strong> — Deployment Preparation and High-Performance Frameworks</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mar 17</td>
+                            <td>
+                                <div class="guest-lecture">[Guest Lecture]</div>
+                                <div class="lecture-title">L17. Deployment Preparation: Speculative Decoding, Quantization, Pruning, and NAS</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <ul class="compact">
+                                        <li>Speculative decoding: concepts and systems implications</li>
+                                        <li>Advanced data types and quantization paradigms</li>
+                                        <li>Calibration strategies and accuracy tradeoffs</li>
+                                        <li>Pruning and neural architecture search (NAS) for inference efficiency</li>
+                                    </ul>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>A4 released (Inference and Serving Assignment) <span class="tag release">Release</span></li>
+                                </ul>
+                            </td>
+                            <td>—</td>
+                            <td class="mini">Guest</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mar 19</td>
+                            <td>
+                                <div class="lecture-title">L18. Fundamentals and Overview of High-Performance Inference Frameworks</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        A systems overview of modern inference engines, batching/scheduling, memory management, and throughput/latency tradeoffs.
+                                    </p>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>Midterm check-in report due <span class="tag milestone">Milestone</span></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="reading-list">
+                                    <li><a href="https://www.aleksagordic.com/blog/vllm" target="_blank" rel="noopener noreferrer">vLLM overview (blog)</a></li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Mar 24</td>
+                            <td>
+                                <div class="lecture-title">Spring Recess <span class="tag break">No class</span></div>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Mar 26</td>
+                            <td>
+                                <div class="lecture-title">Spring Recess <span class="tag break">No class</span></div>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Mar 31</td>
+                            <td>
+                                <div class="guest-lecture">[Guest Lecture]</div>
+                                <div class="lecture-title">L19. High-Performance Inference using Dynamo and TRT-LLM</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Compilation and runtime strategies for production inference, including graph capture, kernel selection, and end-to-end profiling.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td class="mini">Guest</td>
+                        </tr>
+
+                        <tr>
+                            <td>Apr 2</td>
+                            <td>
+                                <div class="lecture-title">L20. High-Performance Inference using vLLM and SGLang</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Serving engines and control runtimes for LLM applications: throughput optimization, KV cache management, and efficient scheduling.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <!-- Part 5 -->
+                        <tr class="section-header">
+                            <td colspan="4"><strong>Part 5: LLM Applications and Use Cases</strong> — Building Real-World AI Systems</td>
+                        </tr>
+
+                        <tr>
+                            <td>Apr 7</td>
+                            <td>
+                                <div class="lecture-title">L21. Fundamentals of Context Engineering</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Designing prompts, retrieval, memory, and tool usage under latency/cost constraints and reliability targets.
+                                    </p>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>A4 due <span class="tag deadline">Deadline</span></li>
+                                    <li>A5 released (Applications Assignment) <span class="tag release">Release</span></li>
+                                </ul>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Apr 9</td>
+                            <td>
+                                <div class="guest-lecture">[Guest Lecture]</div>
+                                <div class="lecture-title">L22. Agentic Applications</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Building agentic systems: planning, tool use, orchestration, evaluation, and failure modes.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td class="mini">Guest</td>
+                        </tr>
+
+                        <tr>
+                            <td>Apr 14</td>
+                            <td>
+                                <div class="guest-lecture">[Guest Lecture]</div>
+                                <div class="lecture-title">L23. Safety Guardrails</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Deployment-time safety: guardrails, red teaming, monitoring, and risk mitigation in real systems.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td class="mini">Guest</td>
+                        </tr>
+
+                        <!-- Part 6 -->
+                        <tr class="section-header">
+                            <td colspan="4"><strong>Part 6: Research Greenfields</strong> — Emerging Research Directions</td>
+                        </tr>
+
+                        <tr>
+                            <td>Apr 16</td>
+                            <td>
+                                <div class="lecture-title">L24. Diffusion Language Models</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Alternative generative paradigms beyond autoregressive decoding and how they change training/inference tradeoffs.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Apr 21</td>
+                            <td>
+                                <div class="lecture-title">L25. Advanced RL Algorithms</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Modern RL methods relevant to post-training and agentic systems, including credit assignment and stability at scale.
+                                    </p>
+                                </details>
+                                <div class="mini"><strong>Also:</strong></div>
+                                <ul class="mini compact">
+                                    <li>A5 due (Applications Assignment) <span class="tag deadline">Deadline</span></li>
+                                </ul>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Apr 23</td>
+                            <td>
+                                <div class="lecture-title">L26. Multi-Agent Systems and Architecture</div>
+                                <details class="lecture-topics">
+                                    <summary>Key topics</summary>
+                                    <p class="mini" style="margin: 0;">
+                                        Multi-agent coordination, communication, and architecture patterns for scalable AI systems.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Apr 26</td>
+                            <td>
+                                <div class="lecture-title">Draft project report due <span class="tag milestone">Milestone</span></div>
+                                <div class="mini">Submit on Gradescope</div>
+                            </td>
+                            <td>—</td>
+                            <td class="mini">Peer review cycle</td>
+                        </tr>
+
+                        <tr>
+                            <td>Apr 28</td>
+                            <td>
+                                <div class="lecture-title">Project Presentations (Session A) <span class="tag milestone">Milestone</span></div>
+                                <div class="mini">Week prior to RRR week</div>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Apr 30</td>
+                            <td>
+                                <div class="lecture-title">Project Presentations (Session B) <span class="tag milestone">Milestone</span></div>
+                                <div class="mini">Week prior to RRR week</div>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>May 1</td>
+                            <td>
+                                <div class="lecture-title">Peer review due <span class="tag milestone">Milestone</span></div>
+                                <div class="mini">Submit on Gradescope</div>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>May 5</td>
+                            <td>
+                                <div class="lecture-title">Poster session (RRR Week) <span class="tag milestone">Milestone</span></div>
+                                <div class="mini">No formal lecture</div>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>May 10</td>
+                            <td>
+                                <div class="lecture-title">Final deliverables due <span class="tag milestone">Milestone</span></div>
+                                <div class="mini">Code + final report</div>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>May 15</td>
+                            <td>
+                                <div class="lecture-title">Impact update <span class="tag milestone">Milestone</span></div>
+                                <div class="mini">Proof of impact document</div>
+                            </td>
+                            <td>—</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="grading">
+            <h2>Grading &amp; Policies</h2>
+            <div class="info-section">
+                <h3>Grading Breakdown</h3>
+                <p>This course has <strong>no exams</strong>. Evaluation is based on assignments, a semester-long research project, scribing, and participation.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 70%;">Component</th>
+                            <th style="width: 30%;">Weight</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Research project</td>
+                            <td>50%</td>
+                        </tr>
+                        <tr>
+                            <td>Assignments</td>
+                            <td>35%</td>
+                        </tr>
+                        <tr>
+                            <td>Scribing (2 lectures per student)</td>
+                            <td>5%</td>
+                        </tr>
+                        <tr>
+                            <td>Attendance &amp; participation</td>
+                            <td>10%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="callout">
+                    <strong>Important:</strong> Failing any one component fails the class. You must complete every component satisfactorily.
+                </div>
+
+                <h3>Commitment &amp; Letter Grading</h3>
+                <p>This course requires sustained weekly engagement (group work, compute usage, and in-person checkoffs). <strong>Letter grade only</strong> (no Satisfactory/Non-Satisfactory).</p>
+
+                <h3>Assignments</h3>
+                <p>There are five group-based assignments, each spanning roughly 2–3 weeks. Assignments include conceptual questions and hands-on experiments (implementation, profiling, scaling, analysis) with an in-person oral checkoff/presentation per assignment.</p>
+                <p class="note">All assignment release/due dates are listed in the <a href="#schedule">Consolidated Schedule</a>.</p>
+
+                <ul>
+                    <li><strong>A1:</strong> Parallelism Assignment</li>
+                    <li><strong>A2:</strong> Pre-Training Assignment</li>
+                    <li><strong>A3:</strong> Post-Training Assignment</li>
+                    <li><strong>A4:</strong> Inference and Serving Assignment</li>
+                    <li><strong>A5:</strong> Applications Assignment</li>
+                </ul>
+
+                <h4>Late Policy</h4>
+                <p>You have <strong>3 total slack days</strong> across the semester for assignments. At most <strong>one slack day</strong> may be applied to any single assignment (extends deadline by 24 hours). No other late work is accepted without an approved exception.</p>
+
+                <h3>Research Project</h3>
+                <p>The research project is group-based and open-ended, with an emphasis on producing something useful to the community.</p>
+                <p class="note">All project milestones and dates are listed in the <a href="#schedule">Consolidated Schedule</a>.</p>
+                <ul>
+                    <li><strong>Technical quality (40%):</strong> hypothesis clarity, depth, correctness, rigor, and artifact quality (code + report + other deliverables).</li>
+                    <li><strong>Impact (10%):</strong> evidence of external usefulness (e.g., PR merged into open source, reproducible benchmark, public report, arXiv preprint).</li>
+                    <li><strong>Peer review:</strong> each group provides a structured review of another group’s report.</li>
+                </ul>
+
+                <h3>Scribing</h3>
+                <p>Each student is expected to scribe <strong>2 lectures</strong>. Scribe assignments will be posted on Ed. LLM assistance may be used for drafting, but the final scribe must be accurate, edited, and clearly written. If you use external sources or AI tools, cite them clearly.</p>
+
+                <h3>Attendance &amp; Participation</h3>
+                <p>Attendance is required. Participation includes contributing to in-class discussions and project check-ins, posting/answering on Ed, and providing constructive comments on lecture notes and slides.</p>
+
+                <h3>Academic Integrity</h3>
+                <p>Collaboration is encouraged within your group. Do not copy code or reports from other groups. If you use external code or AI assistants, cite the source clearly and ensure you understand the work you submit.</p>
+
+                <h3>Infrastructure Notes</h3>
+                <p>This course uses shared GPU infrastructure. For access/quota/networking issues, post on Ed and include timestamps, job IDs, logs, and a short repro description. Multi-node experiments require coordinating with another team to share nodes for a bounded window of time.</p>
+
+                <p class="mini">Submission platform (Gradescope): all written and code submissions are via Gradescope (TBD), unless explicitly stated otherwise. Oral presentations/checkoffs require sign-up and in-person attendance.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>This page was generated for GitHub Pages.</p>
+        </footer>
+    </div>
 </body>
 </html>
