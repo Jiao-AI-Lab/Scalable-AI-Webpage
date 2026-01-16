@@ -308,6 +308,13 @@
             color: #374151;
         }
 
+        .tag.course {
+            border-color: #bfdbfe;
+            background: #eff6ff;
+            color: #1d4ed8;
+            margin-left: 10px;
+        }
+
         footer {
             text-align: center;
             padding: 40px 0 20px;
@@ -342,8 +349,209 @@
             margin-bottom: 0;
         }
 
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            border: 1px solid #e5e7eb;
+            background: #ffffff;
+            color: #1f2937;
+            font-weight: 700;
+            font-size: 0.95em;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            transition: transform 0.05s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #f9fafb;
+            border-color: #d1d5db;
+            text-decoration: none;
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .btn.primary {
+            background: #2563eb;
+            border-color: #2563eb;
+            color: #ffffff;
+        }
+
+        .btn.primary:hover {
+            background: #1d4ed8;
+            border-color: #1d4ed8;
+        }
+
+        /* Syllabus download card */
+        .download-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .download-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #eff6ff 0%, #ecfeff 100%);
+            border: 1px solid #bfdbfe;
+            font-size: 28px;
+            flex: 0 0 auto;
+        }
+
+        .download-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .download-title {
+            font-weight: 800;
+            color: #111827;
+            font-size: 1.15em;
+            margin-bottom: 4px;
+        }
+
+        .download-subtitle {
+            color: #4b5563;
+            margin-bottom: 12px;
+        }
+
+        .download-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 6px;
+        }
+
+        .download-hint {
+            margin-top: 10px;
+            font-size: 0.92em;
+            color: #6b7280;
+        }
+
+        /* Course team cards */
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 14px;
+        }
+
+        .person-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 14px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+            transition: transform 0.08s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .person-card:hover {
+            transform: translateY(-1px);
+            border-color: #bfdbfe;
+            box-shadow: 0 6px 18px rgba(37,99,235,0.12);
+            text-decoration: none;
+        }
+
+        .person-card img {
+            width: 56px;
+            height: 56px;
+            border-radius: 999px;
+            object-fit: cover;
+            border: 1px solid #e5e7eb;
+            background: #f9fafb;
+            flex: 0 0 auto;
+        }
+
+        .person-meta {
+            min-width: 0;
+        }
+
+        .person-name {
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.2;
+        }
+
+        .person-role {
+            font-size: 0.9em;
+            color: #6b7280;
+            margin-top: 2px;
+        }
+
+        .person-affil {
+            font-size: 0.9em;
+            color: #4b5563;
+            margin-top: 2px;
+        }
+
+        .person-card.disabled {
+            opacity: 0.75;
+            cursor: default;
+        }
+
+        .person-card.disabled:hover {
+            transform: none;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+            border-color: #e5e7eb;
+        }
+
+        /* Sponsor card */
+        .sponsor-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 50%, #eff6ff 100%);
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 26px 20px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .sponsor-logo {
+            width: 140px;
+            height: auto;
+            margin: 0 auto 12px;
+            display: block;
+        }
+
+        .sponsor-card h3 {
+            margin: 8px 0 10px;
+        }
+
+        .sponsor-card p {
+            margin: 0;
+            color: #4b5563;
+        }
+
+        @media (max-width: 900px) {
+            .people-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 780px) {
             .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .people-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -365,6 +573,19 @@
                 width: 100%;
                 text-align: center;
             }
+
+            .download-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .download-actions {
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -379,6 +600,9 @@
 
             <nav aria-label="Page sections">
                 <a href="#overview">Overview</a>
+                <a href="#syllabus">Syllabus</a>
+                <a href="#team">Course Team</a>
+                <a href="#sponsor">Compute Sponsor</a>
                 <a href="#logistics">Logistics</a>
                 <a href="#tools">Practical Tools</a>
                 <a href="#schedule">Consolidated Schedule</a>
@@ -400,6 +624,96 @@
             </div>
         </section>
 
+        <section id="syllabus">
+            <h2>Syllabus</h2>
+            <div class="info-section">
+                <div class="download-card" role="region" aria-label="Syllabus PDF download">
+                    <div class="download-icon" aria-hidden="true">📄</div>
+                    <div class="download-content">
+                        <div class="download-title">Syllabus (PDF)</div>
+                        <div class="download-subtitle">Course policies, project expectations, assignment workflow, and course structure.</div>
+                        <div class="download-actions">
+                            <a class="btn primary" href="assets/syllabus.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+                            <a class="btn" href="assets/syllabus.pdf" download>Download</a>
+                        </div>
+                        <div class="download-hint">Tip: If your browser opens the PDF instead of downloading it, click “Download” in the PDF viewer.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team">
+            <h2>Course Team</h2>
+            <div class="info-section">
+                <h3>Instructors</h3>
+                <div class="people-grid">
+                    <a class="person-card" href="https://www2.eecs.berkeley.edu/Faculty/Homepages/sahai.html" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/team/anant_sahai.jpg" alt="Prof. Anant Sahai" loading="lazy">
+                        <div class="person-meta">
+                            <div class="person-name">Prof. Anant Sahai</div>
+                            <div class="person-role">Instructor</div>
+                            <div class="person-affil">UC Berkeley EECS</div>
+                        </div>
+                    </a>
+
+                    <a class="person-card" href="https://people.eecs.berkeley.edu/~jiantao/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/team/jiantao_jiao.png" alt="Prof. Jiantao Jiao" loading="lazy">
+                        <div class="person-meta">
+                            <div class="person-name">Prof. Jiantao Jiao</div>
+                            <div class="person-role">Instructor</div>
+                            <div class="person-affil">UC Berkeley EECS &amp; Statistics</div>
+                        </div>
+                    </a>
+                </div>
+
+                <h3>Teaching Staff</h3>
+                <div class="people-grid">
+                    <a class="person-card" href="https://haochengxi.github.io/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/team/haocheng_xi.png" alt="Haocheng Xi" loading="lazy">
+                        <div class="person-meta">
+                            <div class="person-name">Haocheng Xi</div>
+                            <div class="person-role">GSI</div>
+                            <div class="person-affil">UC Berkeley</div>
+                        </div>
+                    </a>
+
+                    <div class="person-card disabled" aria-label="Paul Zhao (link TBD)">
+                        <img src="assets/team/paul_zhao.png" alt="Paul Zhao" loading="lazy">
+                        <div class="person-meta">
+                            <div class="person-name">Paul Zhao</div>
+                            <div class="person-role">GSI <span class="mini">• webpage link TBD</span></div>
+                            <div class="person-affil">UC Berkeley</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Support</h3>
+                <div class="people-grid">
+                    <div class="person-card disabled" aria-label="Venkat Srinivasan (link TBD)">
+                        <img src="assets/team/venkat.png" alt="Venkat Srinivasan" loading="lazy">
+                        <div class="person-meta">
+                            <div class="person-name">Venkat Srinivasan</div>
+                            <div class="person-role">Support <span class="mini">• webpage link TBD</span></div>
+                            <div class="person-affil">Course infrastructure &amp; ops</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="note" style="margin-top: 14px;">Staff list may expand; check Ed for updates.</p>
+            </div>
+        </section>
+
+        <section id="sponsor">
+            <h2>Compute Sponsor</h2>
+            <div class="info-section">
+                <div class="sponsor-card">
+                    <img class="sponsor-logo" src="assets/sponsors/nvidia.png" alt="NVIDIA logo" loading="lazy">
+                    <h3>Thank you, NVIDIA.</h3>
+                    <p>NVIDIA is the compute sponsor for <strong>Scalable AI: Bridging Theory, Understanding, and Practice</strong>. Their support provides the GPU infrastructure that makes the course labs and projects possible.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="logistics">
             <h2>Logistics</h2>
             <div class="info-section">
@@ -413,12 +727,19 @@
 
                     <div class="item">
                         <div class="label">Instructors</div>
-                        <div class="value">Jiantao Jiao; Anant Sahai</div>
+                        <div class="value">
+                            <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/sahai.html" target="_blank" rel="noopener noreferrer">Anant Sahai</a>;
+                            <a href="https://people.eecs.berkeley.edu/~jiantao/" target="_blank" rel="noopener noreferrer">Jiantao Jiao</a>
+                        </div>
                     </div>
 
                     <div class="item">
                         <div class="label">Teaching Staff</div>
-                        <div class="value">TBD</div>
+                        <div class="value">
+                            <a href="https://haochengxi.github.io/" target="_blank" rel="noopener noreferrer">Haocheng Xi</a>;
+                            Paul Zhao; Venkat Srinivasan
+                            <div class="mini">Full staff cards + photos in <a href="#team">Course Team</a>.</div>
+                        </div>
                     </div>
 
                     <div class="item">
@@ -443,7 +764,9 @@
 
                     <div class="item">
                         <div class="label">Resources</div>
-                        <div class="value">Forum (Ed): TBD<br>Gradescope: TBD</div>
+                        <div class="value">
+                            Gradescope entry code: 4DDRWY
+                        </div>
                     </div>
                 </div>
 
@@ -478,7 +801,7 @@
             <div class="info-section">
                 <p class="note">
                     Everything in one place: lecture plan, dated timeline, deadlines/milestones, and recommended readings.
-                    Dates below are for <strong>Spring 2026</strong>. Guest speakers and exact ordering are subject to change.
+                    Dates below are for <strong>Spring 2026</strong>. <strong>Lecture plan subject to change.</strong>
                 </p>
 
                 <table>
